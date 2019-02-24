@@ -6,10 +6,10 @@ using SonicBloom.Koreo;
 public class AppManager:MonoBehaviour
 {
     // [SerializeField] private CameraController camController;
-    // [SerializeField] private PSController pSController;
+    [SerializeField] private PSController pSController;
     // [SerializeField] private BallController ballController;
     // [SerializeField] private VidController vidController;
-[SerializeField] private DisplacementControl displacementControl;
+    [SerializeField] private DisplacementControl displacementControl;
 
 
     private const string EVENT_ID = "DrippleEventID";
@@ -41,6 +41,9 @@ public class AppManager:MonoBehaviour
 
         oddNote = !oddNote;
         
+        AnimateByCallCount(callCount);
+
+
         /* 
         if(callCount < 4)
         {
@@ -108,6 +111,16 @@ public class AppManager:MonoBehaviour
 
         // pSController.Emit();
         */
+    }
+
+    private void AnimateByCallCount(int count)
+    {
+        if(count < 34) return;
+
+        if(count % 2 == 0)
+        {
+            pSController.Emit();
+        }
     }
     #endregion
 }

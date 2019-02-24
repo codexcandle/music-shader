@@ -45,7 +45,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AlphaClip: 0
-    - _Amount: -8.2
+    - _Amount: -4
     - _Blend: 0
     - _BumpScale: 1
     - _Cull: 2
